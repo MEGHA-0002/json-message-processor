@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>day 10-cw</title>
+</head>
+<body>
+  <script type="text/javascript">
+    
+    let jsonText = '{"name":"Megha Ajith","email":"megha123@gmail.com","message":"How are you?"}';
+
+    
+    const UserMessage = (txt) => {
+      try {
+        
+        let userObj = JSON.parse(txt);
+        console.log(`Message received from ${userObj.name}`);
+      } catch (err) {
+        console.log("Error: Invalid JSON ->", err.message);
+      }
+    };
+
+   
+    UserMessage(jsonText);
+  </script>
+</body>
+</html>
